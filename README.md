@@ -18,37 +18,54 @@ Make sure you have the following installed on your machine:
    cd my-node-app
    npm init -y
 
-Create a simple Node.js application (e.g., app.js).
+# Create a simple Node.js application (e.g., app.js).
 
-Install any necessary dependencies:
-npm install express
+1. Install any necessary dependencies:
+   ```bash
+   npm install express
 
-Verify that your application runs successfully:
-node app.js
+2. Verify that your application runs successfully:
+   ```bash
+   node app.js
 
-Step 2: Dockerize the Node.js Application
-Create a Dockerfile
+## Step 2: Dockerize the Node.js Application
+1. Create a Dockerfile
 
-Build the Docker image:
+2. Build the Docker image:
+   ```bash
+   docker build -t <your node app name> .
 
-docker build -t my-node-app .
+3. Verify the image is created successfully
+   ```bash
+   docker images
 
-Verify the image is created successfully:
+## Step 3: Push Docker Image to Docker Hub
+1. Log in to Docker Hub
+   ```bash
+   docker login
 
-docker images
+2. Tag the Docker image:
+   ```bash
+   docker tag  <your node app name>:latest <your-dockerhub-username>/ <your node app name>:latest
 
-Step 3: Push Docker Image to Docker Hub
-Log in to Docker Hub:
+3. Push the Docker image to Docker Hub
+   ```bash
+   docker push <your-dockerhub-username>/ <your node app name>:latest
+4. Verify the image is available on Docker Hub.
+# Congratulations! You have successfully created a React.js application, Dockerized it, and pushed the Docker image to Docker Hub.
 
-docker login
+<div align="center">
+ 
+### Thanks For Watch This Repositories!
 
-Tag the Docker image:
-docker tag my-node-app:latest <your-dockerhub-username>/my-node-app:latest
+### <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"><i>KEEP AWESOME & STAY COOL!</i><img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30">
 
-Push the Docker image to Docker Hub:
+### Feel Free To Fork And Report If You Find Any Issue :)
 
-docker push <your-dockerhub-username>/my-node-app:latest
-Verify the image is available on Docker Hub.
+![Star Badge](https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99)
+[![View Repositories](https://img.shields.io/badge/View-My_Repositories-blue?logo=GitHub)](https://github.com/iamvikramkumar?tab=repositories)
+[![View My Profile](https://img.shields.io/badge/View-My_Profile-green?logo=GitHub)](https://github.com/iamvikramkumar)
+</div>
 
 
 
